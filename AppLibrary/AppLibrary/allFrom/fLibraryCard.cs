@@ -23,12 +23,12 @@ namespace AppLibrary.allFrom
 
         private void FLibraryCard_Load(object sender, EventArgs e)
         {
-            var user = this.controller.profile();
-            var temp = user.PHONE_NUMBER.ToString();
-            this.txtCode.Text = user.STUDENT_CODE;
-            this.txtName.Text = user.NAME;
-            this.txtEmail.Text = user.email;
-            this.txtPhone.Text = temp;
+            var code = allFrom.loginForm.codeIDuser;
+            var profile = controller.profile(code);
+            this.txtPhone.Text = profile.PHONE_NUMBER.ToString();
+            this.txtName.Text = profile.NAME;
+            this.txtEmail.Text = profile.email;
+            this.txtCode.Text = allFrom.loginForm.codeIDuser;
         }
     }
 }

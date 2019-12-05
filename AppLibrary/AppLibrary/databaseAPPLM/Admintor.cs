@@ -37,13 +37,26 @@ namespace AppLibrary.databaseAPPLM
             }
             return false;
         }
-        public customer profile()
+        public customer profile(string code)
         {
-
-            var id = userLogin;
             var data = new myLMDBEntities();
-            var proUser = data.customers.Find(id);
+            var proUser = data.customers.Find(code);
             return proUser;
+        }
+        public BOOK[] searchingBook(string name)
+        {
+            var data = new myLMDBEntities();
+            var books = data.BOOKs.Where(b => b.NAME == name).ToArray();
+            return books;
+        }
+        public BOOK[] serchingAttribute(string author,int year)
+        {
+            var data = new myLMDBEntities();
+            var books = data.BOOKs.Where(book => book.AUTHOR == author)
+           // another way : ...&& book => book.year_relases == year
+                                  .Where(b => b.YEAR_RELEASEED == year)
+                                  .ToArray();
+            return books;
         }
     }
 }

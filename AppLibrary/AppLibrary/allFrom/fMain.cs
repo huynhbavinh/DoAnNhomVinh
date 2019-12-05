@@ -19,6 +19,14 @@ namespace AppLibrary.allFrom
             this.controller = new databaseAPPLM.Admintor();
             this.Load += FMain_Load;
             this.btnCardLibrary.Click += BtnCardLibrary_Click;
+            this.btnSearching.Click += BtnSearching_Click;
+        }
+
+        private void BtnSearching_Click(object sender, EventArgs e)
+        {
+            var search = new allFrom.fSearching();
+            search.ShowDialog();
+            
         }
 
         private void BtnCardLibrary_Click(object sender, EventArgs e)

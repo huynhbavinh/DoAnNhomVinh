@@ -12,6 +12,7 @@ namespace AppLibrary.allFrom
 {
     public partial class loginForm : Form
     {
+        public static string codeIDuser;
         private databaseAPPLM.Admintor controller;
         public loginForm()
         {
@@ -28,6 +29,7 @@ namespace AppLibrary.allFrom
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            codeIDuser = this.txtUsername.Text;
             var acc = this.txtUsername.Text;
             var pass = this.txtPass.Text;
             if (controller.checkUser(acc,pass))
