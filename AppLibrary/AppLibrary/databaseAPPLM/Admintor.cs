@@ -9,7 +9,7 @@ namespace AppLibrary.databaseAPPLM
     public class Admintor
     {
         public BOOK[] getAllBook()
-        {
+        { 
             var data = new myLMDBEntities();
             var allBook = data.BOOKs.ToArray();
             return allBook;

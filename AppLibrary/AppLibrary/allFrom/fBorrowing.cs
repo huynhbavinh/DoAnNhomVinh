@@ -15,7 +15,7 @@ namespace AppLibrary.allFrom
         private databaseAPPLM.Admintor controller;
         private int id_book;
         public fBorrowing(int id)
-        {
+        { 
             this.controller = new databaseAPPLM.Admintor();
             this.id_book = id;
             InitializeComponent();
