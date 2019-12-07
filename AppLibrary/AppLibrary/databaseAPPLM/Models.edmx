@@ -33,6 +33,16 @@
           <Property Name="PHONE_NUMBER" Type="int" Nullable="false" />
           <Property Name="email" Type="varchar(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="date_start" Type="datetime" Nullable="false" />
+          <Property Name="date_end" Type="datetime" Nullable="false" />
+        </EntityType>
         <Association Name="FK__BOOK__CATEGORY_B__25869641">
           <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="1" />
           <End Role="BOOK" Type="Self.BOOK" Multiplicity="*" />
@@ -49,6 +59,7 @@
           <EntitySet Name="BOOK" EntityType="Self.BOOK" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="History" EntityType="Self.History" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__BOOK__CATEGORY_B__25869641" Association="Self.FK__BOOK__CATEGORY_B__25869641">
             <End Role="CATEGORY" EntitySet="CATEGORY" />
             <End Role="BOOK" EntitySet="BOOK" />
@@ -66,6 +77,7 @@
             <End Role="CATEGORY" EntitySet="CATEGORies" />
             <End Role="BOOK" EntitySet="BOOKs" />
           </AssociationSet>
+          <EntitySet Name="Histories" EntityType="myLMDBModel.History" />
         </EntityContainer>
         <EntityType Name="BOOK">
           <Key>
@@ -109,6 +121,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date_start" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_end" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -143,6 +165,17 @@
                 <ScalarProperty Name="STUDENT_CODE" ColumnName="STUDENT_CODE" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Histories">
+            <EntityTypeMapping TypeName="myLMDBModel.History">
+              <MappingFragment StoreEntitySet="History">
+                <ScalarProperty Name="date_end" ColumnName="date_end" />
+                <ScalarProperty Name="date_start" ColumnName="date_start" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

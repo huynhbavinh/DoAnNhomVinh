@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,15 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(29, 122);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(120, 23);
-            this.btnAdmin.TabIndex = 23;
-            this.btnAdmin.Text = "As Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -139,7 +129,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 154);
-            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel2);
@@ -157,8 +146,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel2;

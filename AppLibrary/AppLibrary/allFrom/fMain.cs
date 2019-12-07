@@ -20,6 +20,12 @@ namespace AppLibrary.allFrom
             this.Load += FMain_Load;
             this.btnCardLibrary.Click += BtnCardLibrary_Click;
             this.btnSearching.Click += BtnSearching_Click;
+            this.btnHistory.Click += BtnHistory_Click;
+        }
+
+        private void BtnHistory_Click(object sender, EventArgs e)
+        {
+            (new allFrom.fHistory()).ShowDialog();
         }
 
         private void BtnSearching_Click(object sender, EventArgs e)

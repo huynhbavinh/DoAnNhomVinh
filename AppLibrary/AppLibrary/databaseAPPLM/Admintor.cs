@@ -56,6 +56,23 @@ namespace AppLibrary.databaseAPPLM
                                   .ToArray();
             return books;
         }
+        public void AddHistory(string code,string name,DateTime dateStart ,DateTime dateEnd)
+        {
+            var newHistory = new History();
+            newHistory.name = name;
+            newHistory.code = code;
+            newHistory.date_start = dateStart;
+            newHistory.date_end = dateEnd;
 
+            var data = new myLMDBEntities();
+            data.Histories.Add(newHistory);
+            data.SaveChanges();
+        }
+        public History[] getAllHistory()
+        {
+            var data = new myLMDBEntities();
+            var myHistory = data.Histories.ToArray();
+            return myHistory;
+        }
     }
 }
