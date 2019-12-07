@@ -24,7 +24,7 @@ namespace AppLibrary.allFrom
         private void DataGridView1_DoubleClick(object sender, EventArgs e)
         {
            try
-            {
+            { 
                 if (this.dataGridView1.SelectedRows.Count == 1)
                 {
                     var target = this.dataGridView1.SelectedRows[0];
