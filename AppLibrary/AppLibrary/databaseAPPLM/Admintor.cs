@@ -8,7 +8,6 @@ namespace AppLibrary.databaseAPPLM
 {
     public class Admintor
     {
-        public string userLogin = "" ;
         public BOOK[] getAllBook()
         {
             var data = new myLMDBEntities();
@@ -27,7 +26,6 @@ namespace AppLibrary.databaseAPPLM
             var userAcc = data.customers.Find(code);
             var tempCode = userAcc.STUDENT_CODE;
             var tempPass = userAcc.password;
-            userLogin += userAcc.STUDENT_CODE;
             if (code.Equals(tempCode))
             {
                 if (pass.Equals(tempPass))
@@ -58,5 +56,6 @@ namespace AppLibrary.databaseAPPLM
                                   .ToArray();
             return books;
         }
+
     }
 }
