@@ -18,7 +18,7 @@ namespace AppLibrary.databaseAPPLM
         {
             this.ID = book.ID;
             this.NAME = book.NAME;
-            this.CATEGORY_BOOK = (string)book.CATEGORY.NAME ;
+            this.CATEGORY_BOOK = book.CATEGORY.NAME;
             this.AUTHOR = book.AUTHOR;
             this.YEAR_RELEASEED = book.YEAR_RELEASEED;
         }

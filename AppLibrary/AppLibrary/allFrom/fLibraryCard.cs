@@ -19,6 +19,18 @@ namespace AppLibrary.allFrom
             this.controller = new databaseAPPLM.Admintor();
             InitializeComponent();
             this.Load += FLibraryCard_Load;
+            this.btnCancel.Click += BtnCancel_Click;
+            this.btnOKii.Click += BtnOKii_Click;
+        }
+
+        private void BtnOKii_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void FLibraryCard_Load(object sender, EventArgs e)

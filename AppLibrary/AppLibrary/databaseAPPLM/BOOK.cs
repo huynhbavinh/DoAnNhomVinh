@@ -16,7 +16,7 @@ namespace AppLibrary.databaseAPPLM
     {
         public int ID { get; set; }
         public string NAME { get; set; }
-        public int CATEGORY_BOOK { get; set; }
+        public string CATEGORY_BOOK { get; set; }
         public string AUTHOR { get; set; }
         public int YEAR_RELEASEED { get; set; }
     

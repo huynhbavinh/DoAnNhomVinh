@@ -21,6 +21,25 @@ namespace AppLibrary.allFrom
             this.btnCardLibrary.Click += BtnCardLibrary_Click;
             this.btnSearching.Click += BtnSearching_Click;
             this.btnHistory.Click += BtnHistory_Click;
+            this.dataGridView1.DoubleClick += DataGridView1_DoubleClick;
+        }
+
+        private void DataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.dataGridView1.SelectedRows.Count == 1)
+                {
+                    var target = this.dataGridView1.SelectedRows[0];
+                    var book_borrowing = (databaseAPPLM.BookView)target.DataBoundItem;
+
+                    (new fBorrowing(book_borrowing.ID)).ShowDialog();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private void BtnHistory_Click(object sender, EventArgs e)

@@ -32,16 +32,24 @@ namespace AppLibrary.allFrom
             codeIDuser = this.txtUsername.Text;
             var acc = this.txtUsername.Text;
             var pass = this.txtPass.Text;
-            if (controller.checkUser(acc,pass))
+            try
             {
-                MessageBox.Show("Login thành Công");
-                var fMain = new allFrom.fMain();
-                fMain.Show();
-                this.Hide();
+                if (controller.checkUser(acc, pass))
+                {
+                    MessageBox.Show("Login thành Công");
+                    var fMain = new allFrom.fMain();
+                    fMain.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Login failed");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Login failed");
+
+                throw;
             }
         }
     }

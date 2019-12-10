@@ -50,11 +50,15 @@ namespace AppLibrary.databaseAPPLM
         public BOOK[] serchingAttribute(string author,int year)
         {
             var data = new myLMDBEntities();
-            var books = data.BOOKs.Where(book => book.AUTHOR == author)
-           // another way : ...&& book => book.year_relases == year
-                                  .Where(b => b.YEAR_RELEASEED == year)
-                                  .ToArray();
-            return books;
+            //var books = data.BOOKs.Where(book => book.AUTHOR == author)
+            //another way : ...&& book => book.year_relases == year
+            //                      .Where(b => b.YEAR_RELEASEED == year)
+            //                      .ToArray();
+
+            var r1 = data.BOOKs.Where(book1 => book1.AUTHOR == author).ToArray();
+            var r2 = data.BOOKs.Where(book2 => book2.YEAR_RELEASEED == year).ToArray();
+            var uni = r1.Union(r2).ToArray();
+            return uni;
         }
         public void AddHistory(string code,string name,DateTime dateStart ,DateTime dateEnd)
         {
@@ -73,6 +77,19 @@ namespace AppLibrary.databaseAPPLM
             var data = new myLMDBEntities();
             var myHistory = data.Histories.ToArray();
             return myHistory;
+        }
+        public CATEGORY[] getAllCategori()
+        {
+            var data = new myLMDBEntities();
+            var myCollection = data.CATEGORies.ToArray();
+            return myCollection;
+
+        }
+        public BOOK[] searchingCATEGORY(string target)
+        {
+            var data = new myLMDBEntities();
+            var result = data.BOOKs.Where(b => b.CATEGORY_BOOK == target).ToArray();
+            return result;
         }
     }
 }

@@ -25,9 +25,9 @@ namespace AppLibrary.databaseAPPLM
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<BOOK> BOOKs { get; set; }
-        public virtual DbSet<CATEGORY> CATEGORies { get; set; }
         public virtual DbSet<customer> customers { get; set; }
         public virtual DbSet<History> Histories { get; set; }
+        public virtual DbSet<BOOK> BOOKs { get; set; }
+        public virtual DbSet<CATEGORY> CATEGORies { get; set; }
     }
 }

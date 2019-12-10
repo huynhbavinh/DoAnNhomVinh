@@ -11,13 +11,13 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CATEGORY_BOOK" Type="int" Nullable="false" />
+          <Property Name="CATEGORY_BOOK" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="AUTHOR" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="YEAR_RELEASEED" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CATEGORY">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="NAME" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -43,12 +43,12 @@
           <Property Name="date_start" Type="datetime" Nullable="false" />
           <Property Name="date_end" Type="datetime" Nullable="false" />
         </EntityType>
-        <Association Name="FK__BOOK__CATEGORY_B__25869641">
+        <Association Name="FK__BOOK__CATEGORY_B__628FA481">
           <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="1" />
           <End Role="BOOK" Type="Self.BOOK" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CATEGORY">
-              <PropertyRef Name="ID" />
+              <PropertyRef Name="NAME" />
             </Principal>
             <Dependent Role="BOOK">
               <PropertyRef Name="CATEGORY_BOOK" />
@@ -60,7 +60,7 @@
           <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="History" EntityType="Self.History" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__BOOK__CATEGORY_B__25869641" Association="Self.FK__BOOK__CATEGORY_B__25869641">
+          <AssociationSet Name="FK__BOOK__CATEGORY_B__628FA481" Association="Self.FK__BOOK__CATEGORY_B__628FA481">
             <End Role="CATEGORY" EntitySet="CATEGORY" />
             <End Role="BOOK" EntitySet="BOOK" />
           </AssociationSet>
@@ -70,34 +70,15 @@
     <edmx:ConceptualModels>
       <Schema Namespace="myLMDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="myLMDBEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="customers" EntityType="myLMDBModel.customer" />
+          <EntitySet Name="Histories" EntityType="myLMDBModel.History" />
           <EntitySet Name="BOOKs" EntityType="myLMDBModel.BOOK" />
           <EntitySet Name="CATEGORies" EntityType="myLMDBModel.CATEGORY" />
-          <EntitySet Name="customers" EntityType="myLMDBModel.customer" />
-          <AssociationSet Name="FK__BOOK__CATEGORY_B__25869641" Association="myLMDBModel.FK__BOOK__CATEGORY_B__25869641">
+          <AssociationSet Name="FK__BOOK__CATEGORY_B__628FA481" Association="myLMDBModel.FK__BOOK__CATEGORY_B__628FA481">
             <End Role="CATEGORY" EntitySet="CATEGORies" />
             <End Role="BOOK" EntitySet="BOOKs" />
           </AssociationSet>
-          <EntitySet Name="Histories" EntityType="myLMDBModel.History" />
         </EntityContainer>
-        <EntityType Name="BOOK">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CATEGORY_BOOK" Type="Int32" Nullable="false" />
-          <Property Name="AUTHOR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="YEAR_RELEASEED" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CATEGORY" Relationship="myLMDBModel.FK__BOOK__CATEGORY_B__25869641" FromRole="BOOK" ToRole="CATEGORY" />
-        </EntityType>
-        <EntityType Name="CATEGORY">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="BOOKs" Relationship="myLMDBModel.FK__BOOK__CATEGORY_B__25869641" FromRole="CATEGORY" ToRole="BOOK" />
-        </EntityType>
         <EntityType Name="customer">
           <Key>
             <PropertyRef Name="STUDENT_CODE" />
@@ -109,18 +90,6 @@
           <Property Name="PHONE_NUMBER" Type="Int32" Nullable="false" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <Association Name="FK__BOOK__CATEGORY_B__25869641">
-          <End Type="myLMDBModel.CATEGORY" Role="CATEGORY" Multiplicity="1" />
-          <End Type="myLMDBModel.BOOK" Role="BOOK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CATEGORY">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="BOOK">
-              <PropertyRef Name="CATEGORY_BOOK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="History">
           <Key>
             <PropertyRef Name="id" />
@@ -131,31 +100,43 @@
           <Property Name="date_start" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="date_end" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
+        <EntityType Name="BOOK">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CATEGORY_BOOK" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUTHOR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YEAR_RELEASEED" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CATEGORY" Relationship="myLMDBModel.FK__BOOK__CATEGORY_B__628FA481" FromRole="BOOK" ToRole="CATEGORY" />
+        </EntityType>
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="NAME" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BOOKs" Relationship="myLMDBModel.FK__BOOK__CATEGORY_B__628FA481" FromRole="CATEGORY" ToRole="BOOK" />
+        </EntityType>
+        <Association Name="FK__BOOK__CATEGORY_B__628FA481">
+          <End Type="myLMDBModel.CATEGORY" Role="CATEGORY" Multiplicity="1" />
+          <End Type="myLMDBModel.BOOK" Role="BOOK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORY">
+              <PropertyRef Name="NAME" />
+            </Principal>
+            <Dependent Role="BOOK">
+              <PropertyRef Name="CATEGORY_BOOK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="myLMDBModelStoreContainer" CdmEntityContainer="myLMDBEntities" >
-          <EntitySetMapping Name="BOOKs">
-            <EntityTypeMapping TypeName="myLMDBModel.BOOK">
-              <MappingFragment StoreEntitySet="BOOK">
-                <ScalarProperty Name="YEAR_RELEASEED" ColumnName="YEAR_RELEASEED" />
-                <ScalarProperty Name="AUTHOR" ColumnName="AUTHOR" />
-                <ScalarProperty Name="CATEGORY_BOOK" ColumnName="CATEGORY_BOOK" />
-                <ScalarProperty Name="NAME" ColumnName="NAME" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CATEGORies">
-            <EntityTypeMapping TypeName="myLMDBModel.CATEGORY">
-              <MappingFragment StoreEntitySet="CATEGORY">
-                <ScalarProperty Name="NAME" ColumnName="NAME" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="customers">
             <EntityTypeMapping TypeName="myLMDBModel.customer">
               <MappingFragment StoreEntitySet="customer">
@@ -176,6 +157,25 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="code" ColumnName="code" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOKs">
+            <EntityTypeMapping TypeName="myLMDBModel.BOOK">
+              <MappingFragment StoreEntitySet="BOOK">
+                <ScalarProperty Name="YEAR_RELEASEED" ColumnName="YEAR_RELEASEED" />
+                <ScalarProperty Name="AUTHOR" ColumnName="AUTHOR" />
+                <ScalarProperty Name="CATEGORY_BOOK" ColumnName="CATEGORY_BOOK" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CATEGORies">
+            <EntityTypeMapping TypeName="myLMDBModel.CATEGORY">
+              <MappingFragment StoreEntitySet="CATEGORY">
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
