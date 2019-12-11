@@ -21,8 +21,9 @@ namespace AppLibrary.allFrom
         }
         private void loadhistory()
         {
-            var allHistory = controller.getAllHistory();
-            this.dataGridView1.DataSource = allHistory;
+            var user = allFrom.loginForm.codeIDuser;
+            var userHistories = this.controller.getUSER_history(user);
+            this.dataGridView1.DataSource = userHistories;
         }
         private void FHistory_Load(object sender, EventArgs e)
         {

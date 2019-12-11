@@ -91,5 +91,11 @@ namespace AppLibrary.databaseAPPLM
             var result = data.BOOKs.Where(b => b.CATEGORY_BOOK == target).ToArray();
             return result;
         }
+        public History[] getUSER_history(string StudentCODE)
+        {
+            var data = new myLMDBEntities();
+            var result = data.Histories.Where(h => h.code == StudentCODE).ToArray();
+            return result;
+        }
     }
 }
