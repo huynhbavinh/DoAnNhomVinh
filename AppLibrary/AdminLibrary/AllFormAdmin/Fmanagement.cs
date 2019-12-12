@@ -13,16 +13,23 @@ namespace AdminLibrary.AllFormAdmin
 {
     public partial class Fmanagement : Form
     {
-        private AdminLibrary.databasee.AddminFunction controllerAdmin;
+        private AppLibrary.databaseAPPLM.Admintor controllerAdmin;
         public Fmanagement()
         {
-            this.controllerAdmin = new AdminLibrary.databasee.AddminFunction();
+            this.controllerAdmin = new AppLibrary.databaseAPPLM.Admintor();
             InitializeComponent();
             this.Load += Fmanagement_Load;
+            this.MenuADD.Click += MenuADD_Click;
         }
+
+        private void MenuADD_Click(object sender, EventArgs e)
+        {
+            (new FaddNewBook()).ShowDialog();
+        }
+
         private void load()
         {
-            var result = this.controllerAdmin.getALLHistories();
+            var result = this.controllerAdmin.getAllHistory();
             this.dataGridView1.DataSource = result;
         }
 

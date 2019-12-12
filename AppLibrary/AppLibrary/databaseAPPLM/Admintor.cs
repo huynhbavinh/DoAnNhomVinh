@@ -97,5 +97,30 @@ namespace AppLibrary.databaseAPPLM
             var result = data.Histories.Where(h => h.code == StudentCODE).ToArray();
             return result;
         }
+        public void AddNewBook(string cate,string name, string author, int year)
+        {
+            var data = new myLMDBEntities();
+            var newbook = new BOOK();
+            newbook.NAME = name;
+            newbook.AUTHOR = author;
+            newbook.YEAR_RELEASEED = year;
+            newbook.CATEGORY_BOOK = cate;
+
+            data.BOOKs.Add(newbook);
+            data.SaveChanges();
+        }
+        public void UpdateBook(int id, string category, string name, string author, int year)
+        {
+            var data = new myLMDBEntities();
+            var update = data.BOOKs.Find(id);
+        
+            update.NAME = name;
+            update.AUTHOR = author;
+            update.YEAR_RELEASEED = year;
+            update.CATEGORY_BOOK = category;
+
+            data.Entry(update).State = System.Data.Entity.EntityState.Modified;
+            data.SaveChanges();
+        }
     }
 }

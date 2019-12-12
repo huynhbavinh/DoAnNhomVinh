@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AppLibrary\databaseAPPLM\Models.Designer.cs">
+      <Link>Models.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.edmx</DependentUpon>
+    </Compile>
     <Compile Include="AllFormAdmin\FaddNewBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,34 +107,6 @@
     <Compile Include="AllFormAdmin\Fmanagement.Designer.cs">
       <DependentUpon>Fmanagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="databasee\AddminFunction.cs" />
-    <Compile Include="databasee\BOOK.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="databasee\CATEGORY.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="databasee\customer.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="databasee\History.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="databasee\Models.Context.cs">
-      <DependentUpon>Models.Context.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="databasee\Models.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="databasee\Models.Designer.cs">
-      <DependentUpon>Models.edmx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AllFormAdmin\FaddNewBook.resx">
@@ -155,11 +133,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="databasee\Models.edmx">
+    <EntityDeploy Include="..\AppLibrary\databaseAPPLM\Models.edmx">
+      <Link>Models.edmx</Link>
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Models.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="databasee\Models.edmx.diagram">
+    <None Include="..\AppLibrary\databaseAPPLM\Models.edmx.diagram">
+      <Link>Models.edmx.diagram</Link>
       <DependentUpon>Models.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -196,18 +176,6 @@
       <Project>{e6d967ec-fcc7-461c-add8-d2c434ef9bb3}</Project>
       <Name>AppLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="databasee\Models.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Models.edmx</DependentUpon>
-      <LastGenOutput>Models.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="databasee\Models.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Models.edmx</DependentUpon>
-      <LastGenOutput>Models.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
