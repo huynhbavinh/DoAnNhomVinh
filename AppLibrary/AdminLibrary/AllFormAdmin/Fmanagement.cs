@@ -29,6 +29,7 @@ namespace AdminLibrary.AllFormAdmin
 
         private void load()
         {
+
             var result = this.controllerAdmin.getAllHistory();
             this.dataGridView1.DataSource = result;
         }
