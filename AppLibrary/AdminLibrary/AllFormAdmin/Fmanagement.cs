@@ -20,6 +20,12 @@ namespace AdminLibrary.AllFormAdmin
             InitializeComponent();
             this.Load += Fmanagement_Load;
             this.MenuADD.Click += MenuADD_Click;
+            this.MenuUppdate.Click += MenuUppdate_Click;
+        }
+
+        private void MenuUppdate_Click(object sender, EventArgs e)
+        {
+            (new FdisplayUpdate()).ShowDialog();
         }
 
         private void MenuADD_Click(object sender, EventArgs e)
