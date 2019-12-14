@@ -14,12 +14,17 @@ namespace AdminLibrary.AllFormAdmin
     public partial class FdisplayUpdate : Form
     {
         private AppLibrary.databaseAPPLM.Admintor controllerAdmin;
+        private int id;
+
         public FdisplayUpdate()
         {
             this.controllerAdmin = new AppLibrary.databaseAPPLM.Admintor();
             InitializeComponent();
             this.Load += FdisplayUpdate_Load;
+            this.dataGridView1.DoubleClick += DataGridView1_DoubleClick;
+         
         }
+
         public void loadbook()
         {
             var data = controllerAdmin.getAllBook();
@@ -30,7 +35,18 @@ namespace AdminLibrary.AllFormAdmin
             }
             this.dataGridView1.DataSource = view;
         }
+        
+        void DataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.dataGridView1.SelectedRows.Count == 1)
+            {
+                var row = (BookView)this.dataGridView1.SelectedRows[0].DataBoundItem;
+                var books = new FaddUpdate(row.ID);
 
+                books.ShowDialog();
+                this.loadbook();
+            }
+        }
         private void FdisplayUpdate_Load(object sender, EventArgs e)
         {
             loadbook();

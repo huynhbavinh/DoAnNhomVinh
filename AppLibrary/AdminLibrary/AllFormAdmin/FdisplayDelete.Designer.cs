@@ -39,36 +39,40 @@
             // 
             // btnSearching
             // 
-            this.btnSearching.Location = new System.Drawing.Point(331, 11);
+            this.btnSearching.Location = new System.Drawing.Point(441, 14);
+            this.btnSearching.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearching.Name = "btnSearching";
-            this.btnSearching.Size = new System.Drawing.Size(75, 23);
+            this.btnSearching.Size = new System.Drawing.Size(100, 28);
             this.btnSearching.TabIndex = 9;
             this.btnSearching.Text = "Searching";
             this.btnSearching.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 11);
+            this.textBox1.Location = new System.Drawing.Point(181, 14);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
+            this.textBox1.Size = new System.Drawing.Size(239, 22);
             this.textBox1.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(16, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 24);
+            this.label2.Size = new System.Drawing.Size(149, 29);
             this.label2.TabIndex = 7;
             this.label2.Text = "Book Name";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(12, 40);
+            this.panel1.Location = new System.Drawing.Point(16, 49);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 297);
+            this.panel1.Size = new System.Drawing.Size(633, 366);
             this.panel1.TabIndex = 10;
             // 
             // dataGridView1
@@ -76,19 +80,22 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(475, 297);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(633, 366);
             this.dataGridView1.TabIndex = 0;
             // 
             // FdisplayDelete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 349);
+            this.ClientSize = new System.Drawing.Size(665, 430);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSearching);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FdisplayDelete";
             this.Text = "FdisplayDelete";
             this.panel1.ResumeLayout(false);

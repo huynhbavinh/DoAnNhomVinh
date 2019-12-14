@@ -14,6 +14,8 @@ namespace AdminLibrary.AllFormAdmin
     {
         AppLibrary.databaseAPPLM.Admintor controllerAdmin;
         private int temp;
+        internal readonly int id;
+
         public FaddUpdate(int id)
         {
             this.temp = id;

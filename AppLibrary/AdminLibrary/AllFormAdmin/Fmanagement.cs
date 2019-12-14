@@ -14,6 +14,8 @@ namespace AdminLibrary.AllFormAdmin
     public partial class Fmanagement : Form
     {
         private AppLibrary.databaseAPPLM.Admintor controllerAdmin;
+        internal int id;
+
         public Fmanagement()
         {
             this.controllerAdmin = new AppLibrary.databaseAPPLM.Admintor();
@@ -21,6 +23,12 @@ namespace AdminLibrary.AllFormAdmin
             this.Load += Fmanagement_Load;
             this.MenuADD.Click += MenuADD_Click;
             this.MenuUppdate.Click += MenuUppdate_Click;
+            this.MEnuDelete.Click += MEnuDelete_Click;
+        }
+
+        private void MEnuDelete_Click(object sender, EventArgs e)
+        {
+            (new FdisplayDelete()).ShowDialog();
         }
 
         private void MenuUppdate_Click(object sender, EventArgs e)

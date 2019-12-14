@@ -8,6 +8,9 @@ namespace AppLibrary.databaseAPPLM
 {
     public class Admintor
     {
+        public int id;
+        //public int id { get; set; }
+
         public BOOK[] getAllBook()
         { 
             var data = new myLMDBEntities();
@@ -121,6 +124,13 @@ namespace AppLibrary.databaseAPPLM
 
             data.Entry(update).State = System.Data.Entity.EntityState.Modified;
             data.SaveChanges();
+        }
+        public void DeleteBook(int id)
+        {
+            var db = new myLMDBEntities();
+            var deletebook = db.BOOKs.Find(id);
+            db.BOOKs.Remove(deletebook);
+            db.SaveChanges();
         }
     }
 }
