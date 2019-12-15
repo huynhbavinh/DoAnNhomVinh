@@ -29,6 +29,7 @@ namespace AdminLibrary.AllFormAdmin
         private void FaddUpdate_Load(object sender, EventArgs e)
         {
             var oldBook = this.controllerAdmin.getBook(this.temp);
+            this.cboCategory.DataSource = this.controllerAdmin.getAllCategori();
             this.txtName.Text = oldBook.NAME;
             this.txtAuthor.Text = oldBook.AUTHOR;
             this.txtYear.Text = oldBook.YEAR_RELEASEED.ToString();

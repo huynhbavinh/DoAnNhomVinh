@@ -132,5 +132,24 @@ namespace AppLibrary.databaseAPPLM
             db.BOOKs.Remove(deletebook);
             db.SaveChanges();
         }
+        public void DeleteHistory(int id)
+        {
+            var data = new myLMDBEntities();
+            var deleted = data.Histories.Find(id);
+            data.Histories.Remove(deleted);
+            data.SaveChanges();
+        }
+        public void UpdateProfile(string code,string name,int phone,string email)
+        {
+            var data = new myLMDBEntities();
+            var update = data.customers.Find(code);
+
+            update.NAME = name;
+            update.PHONE_NUMBER = phone;
+            update.email = email;
+            data.Entry(update).State = System.Data.Entity.EntityState.Modified;
+            data.SaveChanges();
+        }
+
     }
 }

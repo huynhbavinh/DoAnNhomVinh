@@ -20,6 +20,19 @@ namespace AdminLibrary.AllFormAdmin
             InitializeComponent();
             this.Load += FdisplayDelete_Load;
             this.dataGridView1.DoubleClick += DataGridView1_DoubleClick;
+            this.btnSearching.Click += BtnSearching_Click;
+        }
+
+        private void BtnSearching_Click(object sender, EventArgs e)
+        {
+            var target = this.textBox1.Text;
+            var result = this.controllerAdmin.searchingBook(target);
+            var view = new BookView[result.Length];
+            for (int i = 0; i < result.Length; i++)
+            {
+                view[i] = new BookView(result[i]);
+            }
+            this.dataGridView1.DataSource = view;
         }
 
         void DataGridView1_DoubleClick(object sender, EventArgs e)

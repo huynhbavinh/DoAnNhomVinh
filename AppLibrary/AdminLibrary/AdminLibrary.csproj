@@ -90,6 +90,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Models.edmx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="AllFormAdmin\FaddNewBook.cs">
       <SubType>Form</SubType>
@@ -151,10 +152,12 @@
       <Link>Models.edmx</Link>
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Models.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EntityDeploy>
     <None Include="..\AppLibrary\databaseAPPLM\Models.edmx.diagram">
       <Link>Models.edmx.diagram</Link>
       <DependentUpon>Models.edmx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Fakes Include="Fakes\EntityFramework.fakes" />
     <None Include="packages.config" />

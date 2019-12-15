@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmanagement));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MenuADD = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuUppdate = new System.Windows.Forms.ToolStripMenuItem();
             this.MEnuDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuRefreshh = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSearching = new System.Windows.Forms.Button();
-            this.MenuRefreshh = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,6 +59,30 @@
             this.menuStrip1.Size = new System.Drawing.Size(718, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MenuADD
+            // 
+            this.MenuADD.Name = "MenuADD";
+            this.MenuADD.Size = new System.Drawing.Size(78, 20);
+            this.MenuADD.Text = "ADD BOOK";
+            // 
+            // MenuUppdate
+            // 
+            this.MenuUppdate.Name = "MenuUppdate";
+            this.MenuUppdate.Size = new System.Drawing.Size(96, 20);
+            this.MenuUppdate.Text = "UPDATE BOOK";
+            // 
+            // MEnuDelete
+            // 
+            this.MEnuDelete.Name = "MEnuDelete";
+            this.MEnuDelete.Size = new System.Drawing.Size(92, 20);
+            this.MEnuDelete.Text = "DELETE BOOK";
+            // 
+            // MenuRefreshh
+            // 
+            this.MenuRefreshh.Name = "MenuRefreshh";
+            this.MenuRefreshh.Size = new System.Drawing.Size(58, 20);
+            this.MenuRefreshh.Text = "Refresh";
             // 
             // label1
             // 
@@ -82,6 +106,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -89,24 +114,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(694, 193);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // MenuADD
-            // 
-            this.MenuADD.Name = "MenuADD";
-            this.MenuADD.Size = new System.Drawing.Size(78, 20);
-            this.MenuADD.Text = "ADD BOOK";
-            // 
-            // MenuUppdate
-            // 
-            this.MenuUppdate.Name = "MenuUppdate";
-            this.MenuUppdate.Size = new System.Drawing.Size(96, 20);
-            this.MenuUppdate.Text = "UPDATE BOOK";
-            // 
-            // MEnuDelete
-            // 
-            this.MEnuDelete.Name = "MEnuDelete";
-            this.MEnuDelete.Size = new System.Drawing.Size(92, 20);
-            this.MEnuDelete.Text = "DELETE BOOK";
             // 
             // label2
             // 
@@ -143,12 +150,6 @@
             this.btnSearching.TabIndex = 6;
             this.btnSearching.Text = "Searching";
             this.btnSearching.UseVisualStyleBackColor = true;
-            // 
-            // MenuRefreshh
-            // 
-            this.MenuRefreshh.Name = "MenuRefreshh";
-            this.MenuRefreshh.Size = new System.Drawing.Size(58, 20);
-            this.MenuRefreshh.Text = "Refresh";
             // 
             // Fmanagement
             // 

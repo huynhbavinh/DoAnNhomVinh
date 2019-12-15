@@ -25,7 +25,11 @@ namespace AppLibrary.allFrom
 
         private void BtnOKii_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var name = this.txtName.Text;
+            var email = this.txtEmail.Text;
+            var phone = int.Parse(this.txtPhone.Text);
+            this.controller.UpdateProfile(this.txtCode.Text, name, phone, email);
+            MessageBox.Show("Update successfully");
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

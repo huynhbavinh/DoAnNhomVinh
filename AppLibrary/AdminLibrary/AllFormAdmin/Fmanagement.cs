@@ -14,7 +14,6 @@ namespace AdminLibrary.AllFormAdmin
     public partial class Fmanagement : Form
     {
         private AppLibrary.databaseAPPLM.Admintor controllerAdmin;
-        internal int id;
 
         public Fmanagement()
         {
@@ -24,6 +23,36 @@ namespace AdminLibrary.AllFormAdmin
             this.MenuADD.Click += MenuADD_Click;
             this.MenuUppdate.Click += MenuUppdate_Click;
             this.MEnuDelete.Click += MEnuDelete_Click;
+            this.MenuRefreshh.Click += MenuRefreshh_Click;
+            this.btnSearching.Click += BtnSearching_Click;
+            this.dataGridView1.DoubleClick += DataGridView1_DoubleClick;
+        }
+
+        private void DataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.dataGridView1.SelectedRows.Count == 1)
+            {
+                if (MessageBox.Show("Do you want to delete this row?", "Confirm",
+                    MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    var Delete = (History)this.dataGridView1.SelectedRows[0].DataBoundItem;
+                    this.controllerAdmin.DeleteHistory(Delete.id);
+                    this.load();
+                }
+            }
+        }
+
+        private void BtnSearching_Click(object sender, EventArgs e)
+        {
+            var target = this.textBox1.Text;
+            var result = this.controllerAdmin.getUSER_history(target);
+
+            this.dataGridView1.DataSource = result;
+        }
+
+        private void MenuRefreshh_Click(object sender, EventArgs e)
+        {
+            this.load();
         }
 
         private void MEnuDelete_Click(object sender, EventArgs e)

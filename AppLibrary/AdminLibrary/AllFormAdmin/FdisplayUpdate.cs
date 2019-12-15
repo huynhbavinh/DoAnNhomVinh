@@ -14,15 +14,26 @@ namespace AdminLibrary.AllFormAdmin
     public partial class FdisplayUpdate : Form
     {
         private AppLibrary.databaseAPPLM.Admintor controllerAdmin;
-        private int id;
-
         public FdisplayUpdate()
         {
             this.controllerAdmin = new AppLibrary.databaseAPPLM.Admintor();
             InitializeComponent();
             this.Load += FdisplayUpdate_Load;
             this.dataGridView1.DoubleClick += DataGridView1_DoubleClick;
+            this.btnSearching.Click += BtnSearching_Click;
          
+        }
+
+        private void BtnSearching_Click(object sender, EventArgs e)
+        {
+            var target = this.textBox1.Text;
+            var result = this.controllerAdmin.searchingBook(target);
+            var view = new BookView[result.Length];
+            for (int i = 0; i < result.Length; i++)
+            {
+                view[i] = new BookView(result[i]);
+            }
+            this.dataGridView1.DataSource = view;
         }
 
         public void loadbook()
