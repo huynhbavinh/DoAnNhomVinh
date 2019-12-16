@@ -95,9 +95,10 @@
             this.Controls.Add(this.btnSearching);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
+            this.ForeColor = System.Drawing.Color.Red;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FdisplayUpdate";
-            this.Text = "FdisplayUpdate";
+            this.Text = "DisplayUpdate Book";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

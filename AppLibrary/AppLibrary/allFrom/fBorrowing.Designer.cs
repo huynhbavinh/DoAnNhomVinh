@@ -43,92 +43,115 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(12, 9);
+            this.lblCode.BackColor = System.Drawing.Color.Silver;
+            this.lblCode.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblCode.Location = new System.Drawing.Point(20, 13);
+            this.lblCode.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(74, 13);
+            this.lblCode.Size = new System.Drawing.Size(113, 19);
             this.lblCode.TabIndex = 0;
             this.lblCode.Text = "Student_code";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(92, 6);
+            this.txtCode.Location = new System.Drawing.Point(154, 8);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtCode.Name = "txtCode";
             this.txtCode.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(200, 20);
+            this.txtCode.Size = new System.Drawing.Size(330, 27);
             this.txtCode.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 79);
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Location = new System.Drawing.Point(20, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(86, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Date_start";
             // 
             // dateStart
             // 
-            this.dateStart.Location = new System.Drawing.Point(92, 73);
+            this.dateStart.Location = new System.Drawing.Point(154, 107);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(200, 20);
+            this.dateStart.Size = new System.Drawing.Size(330, 27);
             this.dateStart.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 44);
+            this.label2.BackColor = System.Drawing.Color.Silver;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(20, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(48, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Book";
             // 
             // txtBook
             // 
-            this.txtBook.Location = new System.Drawing.Point(92, 41);
+            this.txtBook.Location = new System.Drawing.Point(154, 59);
+            this.txtBook.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtBook.Name = "txtBook";
             this.txtBook.ReadOnly = true;
-            this.txtBook.Size = new System.Drawing.Size(200, 20);
+            this.txtBook.Size = new System.Drawing.Size(330, 27);
             this.txtBook.TabIndex = 5;
             // 
             // dateEnd
             // 
-            this.dateEnd.Location = new System.Drawing.Point(92, 112);
+            this.dateEnd.Location = new System.Drawing.Point(154, 164);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(200, 20);
+            this.dateEnd.Size = new System.Drawing.Size(330, 27);
             this.dateEnd.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 118);
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(20, 172);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(81, 19);
             this.label3.TabIndex = 6;
             this.label3.Text = "Date_end";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(217, 166);
+            this.btnSave.Location = new System.Drawing.Point(361, 242);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(125, 33);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(92, 166);
+            this.btnCancel.Location = new System.Drawing.Point(154, 242);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(125, 33);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // fBorrowing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 218);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(636, 318);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dateEnd);
@@ -139,8 +162,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.lblCode);
+            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.OrangeRed;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "fBorrowing";
-            this.Text = "fBorrowing";
+            this.Text = "Borrow Book";
             this.ResumeLayout(false);
             this.PerformLayout();
 
