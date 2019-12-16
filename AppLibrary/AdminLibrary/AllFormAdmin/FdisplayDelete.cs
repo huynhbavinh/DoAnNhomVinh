@@ -61,7 +61,9 @@ namespace AdminLibrary.AllFormAdmin
         }
         private void FdisplayDelete_Load(object sender, EventArgs e)
         {
+
             load();
+
         }
     }
 }
