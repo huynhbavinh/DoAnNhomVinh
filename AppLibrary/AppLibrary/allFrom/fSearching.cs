@@ -71,16 +71,50 @@ namespace AppLibrary.allFrom
         {
             try
             {
-                var year = int.Parse(this.txtyear.Text);
                 var author = this.txtTacGia.Text.ToString();
-                var result = this.controller.serchingAttribute(author, year);
-                var returnBook = new databaseAPPLM.BookView[result.Length];
-
-                for (int i = 0; i < result.Length; i++)
+                var year = this.txtyear.Text;
+                if (author.Length != 0)
                 {
-                    returnBook[i] = new databaseAPPLM.BookView(result[i]);
+                    if (year.Length != 0)
+                    {
+                        var yearINT = int.Parse(year);
+                        var result = this.controller.serchingAttribute(author, yearINT);
+                        var returnBook = new databaseAPPLM.BookView[result.Length];
+
+
+                        for (int i = 0; i < result.Length; i++)
+                        {
+                            returnBook[i] = new databaseAPPLM.BookView(result[i]);
+                        }
+                        this.dataGridView1.DataSource = returnBook;
+                    }
+                    else
+                    {
+                        var r_author = this.controller.searchingAuthor(author);
+                        var returnBook = new databaseAPPLM.BookView[r_author.Length];
+
+                        for (int i = 0; i < r_author.Length; i++)
+                        {
+                            returnBook[i] = new databaseAPPLM.BookView(r_author[i]);
+                        }
+                        this.dataGridView1.DataSource = returnBook;
+
+                    }
                 }
-                this.dataGridView1.DataSource = returnBook;
+                else
+                {
+
+                    var yearINT = int.Parse(this.txtyear.Text);
+                    var r_years = this.controller.searchingYears(yearINT);
+                    var returnBook = new databaseAPPLM.BookView[r_years.Length];
+
+                    for (int i = 0; i < r_years.Length; i++)
+                    {
+                        returnBook[i] = new databaseAPPLM.BookView(r_years[i]);
+                    }
+                    this.dataGridView1.DataSource = returnBook;
+
+                }
             }
             catch (Exception)
             {

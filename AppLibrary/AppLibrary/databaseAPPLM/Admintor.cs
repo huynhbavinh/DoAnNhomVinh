@@ -53,15 +53,25 @@ namespace AppLibrary.databaseAPPLM
         public BOOK[] serchingAttribute(string author,int year)
         {
             var data = new myLMDBEntities();
-            //var books = data.BOOKs.Where(book => book.AUTHOR == author)
-            //another way : ...&& book => book.year_relases == year
-            //                      .Where(b => b.YEAR_RELEASEED == year)
-            //                      .ToArray();
-
             var r1 = data.BOOKs.Where(book1 => book1.AUTHOR == author).ToArray();
             var r2 = data.BOOKs.Where(book2 => book2.YEAR_RELEASEED == year).ToArray();
-            var uni = r1.Union(r2).ToArray();
-            return uni;
+            var result = r1.Union(r2).ToArray();
+
+            return result;
+               
+        }
+        public BOOK[] searchingAuthor(string author)
+        {
+            var data = new myLMDBEntities();
+            var r1 = data.BOOKs.Where(book1 => book1.AUTHOR == author).ToArray();
+            return r1;
+        }
+        public BOOK[] searchingYears( int year)
+        {
+            var data = new myLMDBEntities();          
+            var r2 = data.BOOKs.Where(book2 => book2.YEAR_RELEASEED == year).ToArray();
+            return r2;
+
         }
         public void AddHistory(string code,string name,DateTime dateStart ,DateTime dateEnd)
         {

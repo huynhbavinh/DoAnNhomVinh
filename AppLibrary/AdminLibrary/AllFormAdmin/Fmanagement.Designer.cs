@@ -57,55 +57,52 @@
             this.MenuRefreshh});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(957, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(718, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // MenuADD
             // 
             this.MenuADD.Name = "MenuADD";
-            this.MenuADD.Size = new System.Drawing.Size(97, 24);
+            this.MenuADD.Size = new System.Drawing.Size(78, 20);
             this.MenuADD.Text = "ADD BOOK";
             // 
             // MenuUppdate
             // 
             this.MenuUppdate.Name = "MenuUppdate";
-            this.MenuUppdate.Size = new System.Drawing.Size(119, 24);
+            this.MenuUppdate.Size = new System.Drawing.Size(96, 20);
             this.MenuUppdate.Text = "UPDATE BOOK";
             // 
             // MEnuDelete
             // 
             this.MEnuDelete.Name = "MEnuDelete";
-            this.MEnuDelete.Size = new System.Drawing.Size(115, 24);
+            this.MEnuDelete.Size = new System.Drawing.Size(92, 20);
             this.MEnuDelete.Text = "DELETE BOOK";
             // 
             // MenuRefreshh
             // 
             this.MenuRefreshh.Name = "MenuRefreshh";
-            this.MenuRefreshh.Size = new System.Drawing.Size(70, 24);
+            this.MenuRefreshh.Size = new System.Drawing.Size(58, 20);
             this.MenuRefreshh.Text = "Refresh";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.label1.BackColor = System.Drawing.Color.Tomato;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(344, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.ForeColor = System.Drawing.Color.LightPink;
+            this.label1.Location = new System.Drawing.Point(258, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 54);
+            this.label1.Size = new System.Drawing.Size(172, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Histories";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(16, 170);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(12, 138);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 238);
+            this.panel1.Size = new System.Drawing.Size(694, 193);
             this.panel1.TabIndex = 2;
             // 
             // dataGridView1
@@ -116,58 +113,53 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(925, 238);
+            this.dataGridView1.Size = new System.Drawing.Size(694, 193);
             this.dataGridView1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 121);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(56, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 29);
+            this.label2.Size = new System.Drawing.Size(137, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Student Code";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 81);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(277, 126);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(208, 102);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 22);
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 5;
             // 
             // btnSearching
             // 
-            this.btnSearching.Location = new System.Drawing.Point(525, 123);
-            this.btnSearching.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearching.Location = new System.Drawing.Point(394, 100);
             this.btnSearching.Name = "btnSearching";
-            this.btnSearching.Size = new System.Drawing.Size(100, 28);
+            this.btnSearching.Size = new System.Drawing.Size(75, 23);
             this.btnSearching.TabIndex = 6;
             this.btnSearching.Text = "Searching";
             this.btnSearching.UseVisualStyleBackColor = true;
             // 
             // Fmanagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
-            this.ClientSize = new System.Drawing.Size(957, 411);
+            this.ClientSize = new System.Drawing.Size(718, 334);
             this.Controls.Add(this.btnSearching);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
@@ -176,7 +168,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Fmanagement";
             this.Text = "Library Management";
             this.menuStrip1.ResumeLayout(false);

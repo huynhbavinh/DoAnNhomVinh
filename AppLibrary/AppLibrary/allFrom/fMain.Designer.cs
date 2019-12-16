@@ -39,6 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,20 +50,18 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnExit);
-            this.panel4.Location = new System.Drawing.Point(461, 341);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(346, 277);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(373, 60);
+            this.panel4.Size = new System.Drawing.Size(280, 49);
             this.panel4.TabIndex = 17;
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnExit.Location = new System.Drawing.Point(207, 16);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(155, 13);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(151, 30);
+            this.btnExit.Size = new System.Drawing.Size(113, 24);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -72,10 +71,9 @@
             this.panel2.Controls.Add(this.btnHistory);
             this.panel2.Controls.Add(this.btnCardLibrary);
             this.panel2.Controls.Add(this.btnSearching);
-            this.panel2.Location = new System.Drawing.Point(453, 118);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(340, 145);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(377, 155);
+            this.panel2.Size = new System.Drawing.Size(283, 126);
             this.panel2.TabIndex = 16;
             // 
             // btnHistory
@@ -83,10 +81,9 @@
             this.btnHistory.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnHistory.Location = new System.Drawing.Point(87, 105);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistory.Location = new System.Drawing.Point(65, 85);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(231, 43);
+            this.btnHistory.Size = new System.Drawing.Size(173, 35);
             this.btnHistory.TabIndex = 4;
             this.btnHistory.Text = "Lịch sử";
             this.btnHistory.UseVisualStyleBackColor = false;
@@ -96,10 +93,9 @@
             this.btnCardLibrary.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCardLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCardLibrary.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnCardLibrary.Location = new System.Drawing.Point(87, 54);
-            this.btnCardLibrary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCardLibrary.Location = new System.Drawing.Point(65, 44);
             this.btnCardLibrary.Name = "btnCardLibrary";
-            this.btnCardLibrary.Size = new System.Drawing.Size(231, 43);
+            this.btnCardLibrary.Size = new System.Drawing.Size(173, 35);
             this.btnCardLibrary.TabIndex = 2;
             this.btnCardLibrary.Text = "Thẻ Thư viện";
             this.btnCardLibrary.UseVisualStyleBackColor = false;
@@ -109,10 +105,9 @@
             this.btnSearching.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSearching.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearching.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnSearching.Location = new System.Drawing.Point(87, 4);
-            this.btnSearching.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearching.Location = new System.Drawing.Point(65, 3);
             this.btnSearching.Name = "btnSearching";
-            this.btnSearching.Size = new System.Drawing.Size(231, 43);
+            this.btnSearching.Size = new System.Drawing.Size(173, 35);
             this.btnSearching.TabIndex = 0;
             this.btnSearching.Text = "Searching";
             this.btnSearching.UseVisualStyleBackColor = false;
@@ -120,10 +115,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(453, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(340, 61);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(283, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -132,19 +126,17 @@
             // 
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(433, 386);
+            this.panel1.Size = new System.Drawing.Size(325, 314);
             this.panel1.TabIndex = 14;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 48);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 39);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(425, 338);
+            this.dataGridView1.Size = new System.Drawing.Size(319, 275);
             this.dataGridView1.TabIndex = 1;
             // 
             // label1
@@ -152,23 +144,35 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(25, 2);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(19, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 37);
+            this.label1.Size = new System.Drawing.Size(271, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sách phổ biến hiện nay\r\n";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(579, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "label2";
+            // 
             // fMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 405);
+            this.ClientSize = new System.Drawing.Size(630, 329);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fMain";
             this.Text = "Van Lang Universiry\'s Library";
             this.panel4.ResumeLayout(false);
@@ -178,6 +182,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,5 +198,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

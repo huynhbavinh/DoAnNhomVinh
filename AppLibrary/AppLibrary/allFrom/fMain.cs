@@ -22,6 +22,22 @@ namespace AppLibrary.allFrom
             this.btnSearching.Click += BtnSearching_Click;
             this.btnHistory.Click += BtnHistory_Click;
             this.dataGridView1.DoubleClick += DataGridView1_DoubleClick;
+            this.btnExit.Click += BtnExit_Click;
+            Timer timer = new Timer();
+            timer.Interval = 700;
+            timer.Tick += new EventHandler(Timer_Tick);
+            timer.Enabled = true;
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Random rd = new Random();
+            this.label2.BackColor = Color.FromArgb((rd.Next(0, 255)), (rd.Next(0, 255)),(rd.Next(0, 255)));
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void DataGridView1_DoubleClick(object sender, EventArgs e)
@@ -74,6 +90,9 @@ namespace AppLibrary.allFrom
 
         private void FMain_Load(object sender, EventArgs e)
         {
+            var code = allFrom.loginForm.codeIDuser;
+            var profile = controller.profile(code);
+            this.label2.Text = "Chào bạn, " + profile.NAME.ToString();
             LoadData();
         }
     }

@@ -13,7 +13,6 @@ namespace AppLibrary.allFrom
     public partial class fLibraryCard : Form
     {
         private databaseAPPLM.Admintor controller;
-        
         public fLibraryCard()
         {
             this.controller = new databaseAPPLM.Admintor();
